@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "vue"
+  ],
+  "plugins": [
+    "./utils/plugin/",
+    "transform-class-properties",
+    "@babel/plugin-syntax-jsx"
+  ]
+}
