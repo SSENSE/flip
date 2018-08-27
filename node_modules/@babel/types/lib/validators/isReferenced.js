@@ -59,6 +59,10 @@ function isReferenced(node, parent) {
     case "RestElement":
       return false;
 
+    case "BreakStatement":
+    case "ContinueStatement":
+      return false;
+
     case "FunctionDeclaration":
     case "FunctionExpression":
       return false;

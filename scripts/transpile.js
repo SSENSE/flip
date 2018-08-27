@@ -1,44 +1,45 @@
-import * as fs from 'fs'
-import { transformFile } from '@babel/core'
+import * as fs from "fs";
+import { transformFileSync } from "@babel/core";
 
-export const vueToReact = (path) => {
-    path += '/index.js';
-    const splitPath = path.split('/');
-    const dirName = splitPath[splitPath.length - 2];
+/*
+*
+* Use the babel api to run a custom plugin that converts react to vue.
+*
+* Args:
+*  - path: string
+*
+* */
+export const reactToVue = async path => {
+  path += "/index.js";
+  const splitPath = path.split("/");
+  const dirName = splitPath[splitPath.length - 2];
 
-    transformFile(path, null, async (err, result) => {
-        if (err) {
-            console.log(err)
-        }
+  //use custom babel plugin (defined in .babelrc) to transform file
+  const { code } = transformFileSync(path);
 
-        const vuePath = `dist/vue/${dirName}/index.js`;
-        const reactPath = `dist/react/${dirName}/index.js`;
+  const vuePath = `dist/vue/${dirName}/index.js`;
 
-        await dirCheck(dirName);
+  if (!(await fs.existsSync(`dist/vue/${dirName}`))) {
+    await fs.mkdirSync(`dist/vue/${dirName}`);
 
-        fs.writeFileSync(vuePath, result.code);
-        fs.copyFileSync(path, reactPath)
-    });
+    await fs.writeFileSync(vuePath, code);
+  } else {
+    await fs.writeFileSync(vuePath, code);
+  }
 };
 
-export const dirCheck = (dirName) => {
-    if (!fs.existsSync('dist')) {
-        fs.mkdirSync('dist');
-    }
+export const copyComponent = async path => {
+  path += "/index.js";
+  const splitPath = path.split("/");
+  const dirName = splitPath[splitPath.length - 2];
 
-    if (!fs.existsSync('dist/vue')) {
-        fs.mkdirSync(`dist/vue/`);
-    }
+  const reactPath = `dist/react/${dirName}/index.js`;
 
-    if (!fs.existsSync('dist/react')) {
-        fs.mkdirSync(`dist/react/`);
-    }
+  if (!(await fs.existsSync(`dist/react/${dirName}`))) {
+    await fs.mkdirSync(`dist/react/${dirName}`);
 
-    if (!fs.existsSync(`dist/react/${dirName}`)) {
-        fs.mkdirSync(`dist/react/${dirName}`)
-    }
-
-    if (!fs.existsSync(`dist/vue/${dirName}`)) {
-        fs.mkdirSync(`dist/vue/${dirName}`)
-    }
+    await fs.copyFileSync(path, reactPath);
+  } else {
+    await fs.copyFileSync(path, reactPath);
+  }
 };

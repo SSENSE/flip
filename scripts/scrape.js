@@ -1,27 +1,77 @@
-import * as fs from 'fs'
-import { vueToReact } from "./transpile";
+import * as fs from "fs";
+import { copyComponent, reactToVue } from "./transpile";
 
-export const generateExports = async (library) => {
-    const imports = [];
-    const exports = [];
-    fs.readdir(`dist/${library}`, (err, result) => {
-        result.filter(r => !r.includes('.')).forEach(dirName => {
-            // we use ../ vs absolute import because rollup needs to see a relative path
-            imports.push(`import ${dirName} from '../${library}/${dirName}';`);
-            exports.push(`exports.${dirName} = ${dirName};`);
-        });
-
-        fs.writeFileSync(`dist/${library}/index.js`, imports.join('\n'));
-        fs.appendFileSync(`dist/${library}/index.js`, '\n' + exports.join('\n'));
+/*
+*
+* Generate an index.js file in each framework directory importing
+* and exporting all of it's components.
+*
+* Args:
+*  - framework: string
+*
+* */
+export const generateExports = async framework => {
+  const imports = [];
+  const exports = [];
+  fs.readdir(`dist/${framework}`, (err, result) => {
+    console.log({ result });
+    result.filter(r => !r.includes(".")).forEach(dirName => {
+      // we use ../ vs absolute import because rollup needs to see a relative path
+      imports.push(`import ${dirName} from '../${framework}/${dirName}';`);
+      exports.push(`exports.${dirName} = ${dirName};`);
     });
+
+    fs.writeFileSync(`dist/${framework}/index.js`, imports.join("\n"));
+    fs.appendFileSync(`dist/${framework}/index.js`, "\n" + exports.join("\n"));
+  });
 };
 
-export const transpileComponenets = async () => {
-    fs.readdir('src/components', (err, result) => {
-        result.forEach(dirName => {
-            const path = `src/components/${dirName}`;
-            vueToReact(path)
-        });
-        console.log('Component transpilation complete')
-    });
+/*
+*
+* Send each component to be translated and copied into dist
+*
+* Args:
+*  - path: string
+*
+* */
+export const translateComponents = async path => {
+  const components = [];
+  const result = await fs.readdirSync(path);
+
+  result.forEach(async dirName => {
+    const pathAndDir = path + `/${dirName}`;
+
+    // copy react components to dist
+    components.push(copyComponent(pathAndDir));
+
+    // translate react components to vue components
+    components.push(reactToVue(pathAndDir));
+  });
+
+  return Promise.all(components);
+};
+
+/*
+*
+*  Ensure our dist file structure is prepared for writing.
+*  This is run on every translation attempt, and checks to make sure
+*  each component director exists before writing it's index
+*
+* Args:
+*  - framework: string
+*
+* */
+export const dirCheck = async framework => {
+  if (!(await fs.existsSync("dist"))) {
+    await fs.mkdirSync("dist");
+
+    if (!fs.existsSync("dist/styles")) {
+      await fs.mkdirSync("dist/styles");
+      await fs.copyFileSync("src/styles/atoms.js", "dist/styles/atoms.js");
+    }
+  }
+
+  if (!(await fs.existsSync(`dist/${framework}`))) {
+    await fs.mkdirSync(`dist/${framework}`);
+  }
 };
