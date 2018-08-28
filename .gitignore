@@ -12,6 +12,9 @@ pids
 *.seed
 *.pid.lock
 
+# Editor info
+.idea
+
 # Compiled build folder
 dist
 build

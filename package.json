@@ -1,14 +1,10 @@
 {
-  "name": "component-convertor",
+  "name": "flip",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A React to Vue Component Transpiler",
+  "main": "src/index.js",
   "scripts": {
-    "create-bundle": "./scripts/bundle.sh",
-    "bundle": "yarn transpile && yarn bundle:react && yarn bundle:vue",
-    "bundle:react": "rollup -c rollup.config.react.js",
-    "bundle:vue": "rollup -c rollup.config.vue.js",
-    "transpile": "yarn babel-node src/index.js --presets @babel/env"
+    "build": "babel src/app --presets @babel/env --out-dir build"
   },
   "keywords": [],
   "author": "",
