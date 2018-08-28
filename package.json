@@ -6,8 +6,8 @@
   "scripts": {
     "build": "babel src/app --presets @babel/env --out-dir build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["react", "vue", "babel"],
+  "author": "Quinn Langille",
   "license": "ISC",
   "peerDependencies": {
     "prop-types": "^15.6.2",
