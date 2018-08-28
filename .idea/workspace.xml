@@ -2,72 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aefc4586-2591-4d74-b9f0-d31823a2e9b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/scripts/bundle.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/scripts/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/scripts/rollup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundles/bundle.react.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundles/bundle.vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/react/button/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/react/grid/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/react/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/react/input/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/styles/atoms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vue/button/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vue/grid/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vue/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vue/input/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/arr-diff/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/arr-diff/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/arr-diff/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/arr-diff/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/arr-diff/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/arr-diff/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/arr-diff/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/arr-diff/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/array-unique/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/array-unique/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/array-unique/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/array-unique/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/array-unique/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/array-unique/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/array-unique/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/array-unique/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/braces/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/braces/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/braces/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/braces/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/braces/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/braces/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/braces/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/braces/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/src/browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/src/debug.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/debug/src/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/debug/src/node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fill-range/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fill-range/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fill-range/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fill-range/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fill-range/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fill-range/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fill-range/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fill-range/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/glob-parent/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/glob-parent/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-number/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-number/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-number/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-number/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/isobject/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/isobject/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/isobject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/isobject/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/isobject/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/isobject/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/isobject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/isobject/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/iterator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/yallist/iterator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/yallist/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/yallist.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/yallist/yallist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/scrape.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/scripts/scrape.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/transpile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/scripts/transpile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -93,7 +28,7 @@
           <entry key="LICENSE" value="2" />
           <entry key="babelrc" value="9" />
           <entry key="editorconfig" value="1" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="js" value="180" />
           <entry key="js-vue" value="1" />
           <entry key="json" value="21" />
@@ -113,7 +48,7 @@
           <entry key="JSON" value="30" />
           <entry key="JSX Harmony" value="19" />
           <entry key="JavaScript" value="180" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="PLAIN_TEXT" value="13" />
           <entry key="Vue.js" value="5" />
           <entry key="YAML" value="1" />
           <entry key="yarn.lock" value="3" />
@@ -122,7 +57,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="babelrc" value="96" />
-          <entry key="gitignore" value="29" />
+          <entry key="gitignore" value="35" />
           <entry key="js" value="12463" />
           <entry key="json" value="482" />
           <entry key="jsx" value="88" />
@@ -136,7 +71,7 @@
           <entry key="JSON" value="578" />
           <entry key="JSX Harmony" value="88" />
           <entry key="JavaScript" value="12463" />
-          <entry key="PLAIN_TEXT" value="46" />
+          <entry key="PLAIN_TEXT" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -170,6 +105,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="1" selection-start-column="1" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -215,10 +159,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/scripts/rollup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="1782">
               <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
@@ -273,7 +217,6 @@
         <option value="$PROJECT_DIR$/src/components/button/index.js" />
         <option value="$PROJECT_DIR$/utils/vue-to-react/test.js" />
         <option value="$PROJECT_DIR$/utils/vue-to-react/index.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/scripts/bundle.sh" />
         <option value="$PROJECT_DIR$/rollup.config.vue.js" />
         <option value="$PROJECT_DIR$/rollup.config.react.js" />
@@ -288,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/app/scripts/scrape.js" />
         <option value="$PROJECT_DIR$/src/app/scripts/index.js" />
         <option value="$PROJECT_DIR$/src/app/scripts/rollup.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -393,12 +337,12 @@
       <option name="presentableId" value="Default" />
       <updated>1534955145008</updated>
       <workItem from="1534955146561" duration="49736000" />
-      <workItem from="1535472485014" duration="9873000" />
+      <workItem from="1535472485014" duration="9951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59609000" />
+    <option name="totallyTimeSpent" value="59687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -413,7 +357,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14023961" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14023961" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -428,7 +372,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32884097" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22363405" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20457433" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -580,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/scripts/bundle.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -641,13 +578,6 @@
     <entry file="file://$PROJECT_DIR$/compiled-index.js/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/scripts/scrape.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1275">
@@ -700,11 +630,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/scripts/rollup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="1782">
           <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-377">
+          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>

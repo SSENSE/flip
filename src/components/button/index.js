@@ -7,10 +7,10 @@ class Button extends Component {
     super();
   }
 
-    propTypes = {
-        text: PropTypes.string,
-        banana: PropTypes.bool
-    };
+  propTypes = {
+    text: PropTypes.string,
+    banana: PropTypes.bool
+  };
 
   doSomething() {
     console.log("whatever");
@@ -26,8 +26,8 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-    text: PropTypes.string,
-    banana: PropTypes.bool
+  text: PropTypes.string,
+  banana: PropTypes.bool
 };
 
 export default Button;

@@ -15,16 +15,17 @@ export const generateExports = async framework => {
   const exports = [];
   const results = await fs.readdirSync(`dist/${framework}`);
 
-  await results
-      .filter(result => !result.includes("."))
-      .forEach(dirName => {
-        // we use ../ vs absolute import because rollup needs to see a relative path
-        imports.push(`import ${dirName} from '../${framework}/${dirName}';`);
-        exports.push(`exports.${dirName} = ${dirName};`);
-      });
+  await results.filter(result => !result.includes(".")).forEach(dirName => {
+    // we use ../ vs absolute import because rollup needs to see a relative path
+    imports.push(`import ${dirName} from '../${framework}/${dirName}';`);
+    exports.push(`exports.${dirName} = ${dirName};`);
+  });
 
   await fs.writeFileSync(`dist/${framework}/index.js`, imports.join("\n"));
-  await fs.appendFileSync(`dist/${framework}/index.js`, "\n" + exports.join("\n"));
+  await fs.appendFileSync(
+    `dist/${framework}/index.js`,
+    "\n" + exports.join("\n")
+  );
 };
 
 /*
