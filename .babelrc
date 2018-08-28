@@ -4,7 +4,7 @@
   ],
   "plugins": [
     "./utils/vue-to-react/",
-    "transform-class-properties",
+    "@babel/plugin-proposal-class-properties",
     "@babel/plugin-syntax-jsx",
     "@babel/plugin-proposal-object-rest-spread"
   ]

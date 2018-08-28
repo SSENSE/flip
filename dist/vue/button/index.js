@@ -13,6 +13,7 @@ const Button = {
     doSomething() {
       console.log("whatever");
     }
+
   }
 };
 Button.propTypes = {
@@ -21,8 +22,8 @@ Button.propTypes = {
 };
 export default Button;
 export const StyledButton = styled.button`
-  background: ${props => (props.primary ? "palevioletred" : "white")};
-  color: ${props => (props.primary ? "white" : "palevioletred")};
+  background: ${props => props.primary ? "palevioletred" : "white"};
+  color: ${props => props.primary ? "white" : "palevioletred"};
 
   font-size: 1em;
   margin: 1em;
