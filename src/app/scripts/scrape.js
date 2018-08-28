@@ -13,17 +13,18 @@ import { copyComponent, reactToVue } from "./transpile";
 export const generateExports = async framework => {
   const imports = [];
   const exports = [];
-  fs.readdir(`dist/${framework}`, (err, result) => {
-    console.log({ result });
-    result.filter(r => !r.includes(".")).forEach(dirName => {
-      // we use ../ vs absolute import because rollup needs to see a relative path
-      imports.push(`import ${dirName} from '../${framework}/${dirName}';`);
-      exports.push(`exports.${dirName} = ${dirName};`);
-    });
+  const results = await fs.readdirSync(`dist/${framework}`);
 
-    fs.writeFileSync(`dist/${framework}/index.js`, imports.join("\n"));
-    fs.appendFileSync(`dist/${framework}/index.js`, "\n" + exports.join("\n"));
-  });
+  await results
+      .filter(result => !result.includes("."))
+      .forEach(dirName => {
+        // we use ../ vs absolute import because rollup needs to see a relative path
+        imports.push(`import ${dirName} from '../${framework}/${dirName}';`);
+        exports.push(`exports.${dirName} = ${dirName};`);
+      });
+
+  await fs.writeFileSync(`dist/${framework}/index.js`, imports.join("\n"));
+  await fs.appendFileSync(`dist/${framework}/index.js`, "\n" + exports.join("\n"));
 };
 
 /*
