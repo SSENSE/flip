@@ -14,9 +14,10 @@ export const reactToVue = async path => {
   const splitPath = path.split("/");
   const dirName = splitPath[splitPath.length - 2];
 
-  //use custom babel plugin (defined in .babelrc) to transform file
+  // use custom babel plugin to transform file
+  // source: src/utils/vue-to-react
   const { code } = transformFileSync(path, {
-    plugins: ["./utils/vue-to-react/"]
+    plugins: ["module:vue-to-react"]
   });
 
   const vuePath = `dist/vue/${dirName}/index.js`;

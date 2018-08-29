@@ -11,9 +11,16 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "build": "babel src/app --presets @babel/env --out-dir build"
+    "build": "babel src --presets @babel/env --out-dir build && chmod +x build/index.js"
   },
-  "keywords": ["react", "vue", "babel"],
+  "bin": {
+    "flip": "./build/index.js"
+  },
+  "keywords": [
+    "react",
+    "vue",
+    "babel"
+  ],
   "author": "Quinn Langille <quinn.langille@ssense.com>",
   "license": "ISC",
   "peerDependencies": {
@@ -42,6 +49,7 @@
     "rollup-plugin-node-resolve": "^3.3.0"
   },
   "dependencies": {
-    "commander": "^2.17.1"
+    "commander": "^2.17.1",
+    "vue-to-react": "file:src/utils/vue-to-react"
   }
 }

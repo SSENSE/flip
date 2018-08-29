@@ -1,4 +1,5 @@
 import { translateComponents, generateExports, dirCheck } from "./scrape";
+/*
 
 /*
 *
@@ -7,8 +8,7 @@ import { translateComponents, generateExports, dirCheck } from "./scrape";
 * Args:
 *  - framework: string
 *
-* */
-export const generateComponents = async pathToComponents => {
+* */ export const generateComponents = async pathToComponents => {
   console.log("\nChecking dist directory structure...");
   await dirCheck("react");
   await dirCheck("vue");
