@@ -3,6 +3,11 @@ import babel from "rollup-plugin-babel";
 
 const rollup = require("rollup");
 
+/*
+*
+* Bundle react components
+*
+* */
 const buildReact = async () => {
   console.log("\nBundling React Components...");
   // see below for details on the options
@@ -46,6 +51,12 @@ const buildReact = async () => {
   console.log("Done!");
 };
 
+
+/*
+*
+* Bundle vue components
+*
+* */
 const buildVue = async () => {
   console.log("\nBundling Vue Components...");
 
@@ -90,6 +101,12 @@ const buildVue = async () => {
   console.log("Done!");
 };
 
+
+/*
+*
+* export bundling methods
+*
+* */
 export const build = async () => {
   await buildReact();
   await buildVue();

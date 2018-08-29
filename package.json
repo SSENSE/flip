@@ -1,13 +1,20 @@
 {
-  "name": "flip",
+  "name": "@ssense/flip",
   "version": "1.0.0",
   "description": "A React to Vue Component Transpiler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Groupe-Atallah/flip"
+  },
+  "bugs": {
+    "url": "https://github.com/Groupe-Atallah/flip/issues"
+  },
   "main": "src/index.js",
   "scripts": {
     "build": "babel src/app --presets @babel/env --out-dir build"
   },
   "keywords": ["react", "vue", "babel"],
-  "author": "Quinn Langille",
+  "author": "Quinn Langille <quinn.langille@ssense.com>",
   "license": "ISC",
   "peerDependencies": {
     "prop-types": "^15.6.2",
