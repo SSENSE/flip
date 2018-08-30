@@ -1,0 +1,6 @@
+{
+  "name": "babel-helper-vue-jsx-merge-props",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "ISC"
+}

@@ -16,7 +16,8 @@ program
     await generateComponents(dir);
 
     if (B) {
-      await build();
+      console.log("BUILDING");
+      await build().catch(e => console.log(e));
     }
   })
   .parse(process.argv);

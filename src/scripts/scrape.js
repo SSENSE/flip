@@ -17,7 +17,7 @@ export const generateExports = async framework => {
 
   await results.filter(result => !result.includes(".")).forEach(dirName => {
     // we use ../ vs absolute import because rollup needs to see a relative path
-    imports.push(`import ${dirName} from '../${framework}/${dirName}';`);
+    imports.push(`import ${dirName} from './${dirName}/index.jsx';`);
     exports.push(`exports.${dirName} = ${dirName};`);
   });
 
@@ -40,7 +40,7 @@ export const translateComponents = async path => {
   const components = [];
   const result = await fs.readdirSync(path);
 
-  result.forEach(async dirName => {
+  await result.forEach(async dirName => {
     const pathAndDir = path + `/${dirName}`;
 
     // copy react components to dist
