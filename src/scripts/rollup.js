@@ -30,6 +30,7 @@ const buildReact = async () => {
           "@babel/react"
         ],
         plugins: [
+          // mergeJSXProps,
           "@babel/plugin-proposal-object-rest-spread",
           "@babel/plugin-proposal-class-properties"
         ],
@@ -39,7 +40,7 @@ const buildReact = async () => {
   };
 
   // create a bundle
-  const bundle = await rollup.rollup(inputOptions);
+  const bundle = await rollup.rollup(inputOptions).catch(e => console.log(e));
 
   const outputOptions = {
     file: "dist/bundles/bundle.react.js",
@@ -50,7 +51,6 @@ const buildReact = async () => {
 
   console.log("Done!");
 };
-
 
 /*
 *
@@ -64,7 +64,7 @@ const buildVue = async () => {
   const inputOptions = {
     input: "dist/vue/index.js",
     // All the used libs needs to be here
-    external: ["vue-styled-components"],
+    external: ["react", "vue-styled-components"],
     plugins: [
       resolve(),
       babel({
@@ -76,7 +76,13 @@ const buildVue = async () => {
               modules: false
             }
           ],
-          "vue"
+          [
+            "module:vue-preset",
+            {
+              eventModifiers: false,
+              vModel: false
+            }
+          ]
         ],
         plugins: [
           "@babel/plugin-proposal-object-rest-spread",
@@ -88,19 +94,20 @@ const buildVue = async () => {
   };
 
   // create a bundle
-  const bundle = await rollup.rollup(inputOptions);
+  const bundle = await rollup.rollup(inputOptions).catch(e => console.log(e));
 
   const outputOptions = {
     file: "dist/bundles/bundle.vue.js",
     format: "cjs"
   };
 
+  console.log("MADE THE BUNDLE");
+
   // or write the bundle to disk
-  await bundle.write(outputOptions);
+  await bundle.write(outputOptions).catch(e => console.log(e));
 
   console.log("Done!");
 };
-
 
 /*
 *
