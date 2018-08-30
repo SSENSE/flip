@@ -1,0 +1,35 @@
+{
+  "name": "vue-jsx",
+  "version": "4.0.1",
+  "description": "Babel plugin for Vue 2.0 JSX",
+  "main": "index.js",
+  "unpkg": "dist/babel-plugin-transform-vue-jsx.min.js",
+  "files": [
+    "index.js",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "npm run lint && mocha --require @babel/register",
+    "dev": "cd example && webpack --watch",
+    "build": "webpack -d",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vue",
+    "babel",
+    "jsx"
+  ],
+  "author": "Evan You",
+  "license": "MIT",
+  "dependencies": {
+    "esutils": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/helper-module-imports": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-helper-vue-jsx-merge-props": "file:../merge-props",
+    "@babel/plugin-syntax-jsx": "^7.0.0-beta.40"
+  }
+}
