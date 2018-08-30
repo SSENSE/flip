@@ -101,8 +101,6 @@ const buildVue = async () => {
     format: "cjs"
   };
 
-  console.log("MADE THE BUNDLE");
-
   // or write the bundle to disk
   await bundle.write(outputOptions).catch(e => console.log(e));
 

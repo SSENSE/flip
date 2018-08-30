@@ -13,7 +13,6 @@ export const reactToVue = async path => {
   try {
     const { extension, dirName, newPath } = await buildPath(path);
 
-    console.log("DOING IT");
     // use custom babel plugin to transform file
     // source: src/utils/vue-to-react
     const { code } = transformFileSync(newPath, {

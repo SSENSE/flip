@@ -21,8 +21,6 @@ export const generateExports = async framework => {
     exports.push(`exports.${dirName} = ${dirName};`);
   });
 
-  console.log("WRITING");
-
   await fs.writeFileSync(`dist/${framework}/index.js`, imports.join("\n"));
   await fs.appendFileSync(
     `dist/${framework}/index.js`,
