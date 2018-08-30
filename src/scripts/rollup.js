@@ -77,7 +77,7 @@ const buildVue = async () => {
             }
           ],
           [
-            "module:vue-preset",
+            "module:babel-preset-vue",
             {
               eventModifiers: false,
               vModel: false

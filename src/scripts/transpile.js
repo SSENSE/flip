@@ -19,7 +19,7 @@ export const reactToVue = async path => {
       babelrc: false,
       presets: [
         [
-          "module:vue-preset",
+          "module:babel-preset-vue",
           {
             eventModifiers: false,
             vModel: false
