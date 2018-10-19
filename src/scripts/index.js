@@ -11,8 +11,8 @@ import { translateComponents, generateExports, dirCheck } from "./scrape";
 * */ export const generateComponents = async pathToComponents => {
   try {
     console.log("\nChecking dist directory structure...");
-    await dirCheck("react");
-    await dirCheck("vue");
+    const frameworks = ["react", "vue"]
+    await dirCheck(frameworks, 'styles');
 
     console.log("\nTranspiling components...");
     await translateComponents(pathToComponents);

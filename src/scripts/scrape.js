@@ -63,17 +63,19 @@ export const translateComponents = async path => {
 *  - framework: string
 *
 * */
-export const dirCheck = async framework => {
+export const dirCheck = async (frameworks, stylesDir) => {
   if (!(await fs.existsSync("dist"))) {
     await fs.mkdirSync("dist");
 
     if (!fs.existsSync("dist/styles")) {
       await fs.mkdirSync("dist/styles");
-      await fs.copyFileSync("src/styles/atoms.js", "dist/styles/atoms.js");
+      await fs.copyFileSync(`${stylesDir}/atoms.js`, "dist/styles/atoms.js");
     }
   }
 
-  if (!(await fs.existsSync(`dist/${framework}`))) {
-    await fs.mkdirSync(`dist/${framework}`);
-  }
+  frameworks.forEach(async framework => {
+    if (!(await fs.existsSync(`dist/${framework}`))) {
+      await fs.mkdirSync(`dist/${framework}`);
+    }
+  })
 };
