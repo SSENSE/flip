@@ -1,26 +1,8 @@
 {
   "name": "babel-plugin-transform-vue-jsx",
   "version": "4.0.2",
-  "description": "Babel plugin for Vue 2.0 JSX",
+  "description": "A fork of babel-plugin-transform-vue-jsx by Evan You",
   "main": "index.js",
-  "unpkg": "dist/babel-plugin-transform-vue-jsx.min.js",
-  "files": [
-    "index.js",
-    "lib",
-    "dist"
-  ],
-  "scripts": {
-    "lint": "eslint index.js",
-    "test": "npm run lint && mocha --require @babel/register",
-    "dev": "cd example && webpack --watch",
-    "build": "webpack -d",
-    "prepublishOnly": "npm run build"
-  },
-  "keywords": [
-    "vue",
-    "babel",
-    "jsx"
-  ],
   "author": "Evan You",
   "license": "MIT",
   "dependencies": {
