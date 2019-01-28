@@ -11,7 +11,8 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "build": "babel src --presets @babel/env --out-dir build && chmod +x build/index.js"
+    "build": "babel src --presets @babel/env --out-dir build && chmod +x build/index.js",
+    "test": "mocha  tests/**/*.test.js --recursive --compilers js:@babel/register"
   },
   "bin": {
     "flip": "./build/index.js"
@@ -51,7 +52,9 @@
     "rollup-plugin-node-resolve": "^3.3.0"
   },
   "devDependencies": {
+    "@babel/register": "^7.0.0",
     "chai": "^4.2.0",
+    "fs-extra": "^7.0.0",
     "mocha": "^5.2.0",
     "sinon": "^7.0.0"
   }

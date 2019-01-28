@@ -3,6 +3,31 @@ import { transformFileSync } from "@babel/core";
 
 /*
 *
+* Send each component to be translated and copied into dist
+*
+* Args:
+*  - path: string
+*
+* */
+export const translateComponents = async path => {
+  const components = [];
+  const result = await fs.readdirSync(path);
+
+  await result.forEach(async dirName => {
+    const pathAndDir = path + `/${dirName}`;
+
+    // copy react components to dist
+    components.push(copyComponent(pathAndDir));
+
+    // translate react components to vue components
+    components.push(reactToVue(pathAndDir));
+  });
+
+  return Promise.all(components);
+};
+
+/*
+*
 * Use the babel api to run a custom plugin that converts react to vue.
 *
 * Args:
@@ -61,7 +86,7 @@ export const copyComponent = async path => {
   }
 };
 
-const buildPath = async path => {
+export const buildPath = async path => {
   let extension = "";
   if (fs.existsSync(`${path}/index.jsx`)) {
     path += "/index.jsx";
