@@ -1,8 +1,5 @@
-
-import '@babel/polyfill';
-import { translateComponents, buildPath, reactToVue, copyComponent } from '../../src/scripts/transpile'
+import { translateComponents } from '../../src/scripts/transpile'
 import { dirCheck } from '../../src/scripts/index'
-import { sandbox } from 'sinon';
 import { expect } from 'chai';
 
 const fs = require('fs-extra');

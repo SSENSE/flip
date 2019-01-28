@@ -1,4 +1,3 @@
-import '@babel/polyfill';
 import { generateComponents, dirCheck } from '../../src/scripts/index'
 import { expect } from 'chai';
 
