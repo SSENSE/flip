@@ -12,13 +12,13 @@ describe('scripts/index.js', () => {
     })
 
     it('generates the dist directory', async () => {
-        await dirCheck(['react', 'vue'], 'styles')
+        await dirCheck(['react', 'vue'], 'tests/data/styles')
         expect(fs.pathExistsSync('dist')).to.equal(true);
         expect(fs.readdirSync('dist')).to.deep.equal([ 'react', 'styles', 'vue' ]);
     })
 
     it('generates index.js files inside each directory for export', async () => {
-        await generateComponents('tests/data/components');
+        await generateComponents('tests/data/components', false);
 
         expect(fs.readdirSync('dist/react')).to.include('index.js');
         expect(fs.readdirSync('dist/vue')).to.include('index.js');

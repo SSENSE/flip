@@ -9,16 +9,23 @@ import { translateComponents } from "./transpile";
 *  - pathToComponents: string
 *
 * */ 
-export const generateComponents = async pathToComponents => {
+export const generateComponents = async (pathToComponents, log = true) => {
   try {
-    console.log("\nChecking dist directory structure...");
+    if(log) {
+      console.log("\nChecking dist directory structure...");
+    }
     const frameworks = ["react", "vue"]
     await dirCheck(frameworks, 'styles');
 
-    console.log("\nTranspiling components...");
+    if(log) {
+      console.log("\nTranspiling components...");
+    }
     await translateComponents(pathToComponents);
 
-    console.log("\nBuilding exports...");
+    if(log) {
+      console.log("\nBuilding exports...");
+    }
+
     await generateExports("react");
     await generateExports("vue");
   } catch (e) {
