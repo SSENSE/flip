@@ -12,7 +12,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "babel src --presets @babel/env --out-dir build && chmod +x build/index.js",
-    "test": "NODE_ENV=test mocha tests/**/*.test.js --recursive --require @babel/register --require @babel/polyfill --compilers js:@babel/register"
+    "test": "NODE_ENV=test mocha tests/**/*.test.js --recursive --require @babel/register --require @babel/polyfill"
   },
   "bin": {
     "flip": "./build/index.js"

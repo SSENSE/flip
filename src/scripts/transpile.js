@@ -70,6 +70,14 @@ export const reactToVue = async path => {
   }
 };
 
+/*
+ *
+ * Copies components into the dist directory.
+ *
+ * Args:
+ *  - path: string
+ *
+ * */
 export const copyComponent = async path => {
   try {
     const { extension, newPath, dirName } = await buildPath(path);
@@ -86,6 +94,14 @@ export const copyComponent = async path => {
   }
 };
 
+/*
+ *
+ * Build paths to use during transpilation.
+ *
+ * Args:
+ *  - path: string
+ *
+ * */
 export const buildPath = async path => {
   let extension = "";
   if (fs.existsSync(`${path}/index.jsx`)) {
