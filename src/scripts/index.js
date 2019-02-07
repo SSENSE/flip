@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import * as fs from "fs-extra";
 import { translateComponents } from "./transpile";
 
 /*
@@ -9,13 +9,13 @@ import { translateComponents } from "./transpile";
 *  - pathToComponents: string
 *
 * */ 
-export const generateComponents = async (pathToComponents, log = true) => {
+export const generateComponents = async (pathToComponents, pathToStyles = "styles", log = true) => {
   try {
     if(log) {
       console.log("\nChecking dist directory structure...");
     }
     const frameworks = ["react", "vue"]
-    await dirCheck(frameworks, 'styles');
+    await dirCheck(frameworks, pathToStyles);
 
     if(log) {
       console.log("\nTranspiling components...");
@@ -78,7 +78,7 @@ export const dirCheck = async (frameworks, stylesDir) => {
 
     if (!fs.existsSync("dist/styles")) {
       await fs.mkdirSync("dist/styles");
-      await fs.copyFileSync(`${stylesDir}/atoms.js`, "dist/styles/atoms.js");
+      await fs.copy(`${stylesDir}`, "dist/styles");
     }
   }
 

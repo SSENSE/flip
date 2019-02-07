@@ -1,5 +1,7 @@
 import * as fs from "fs";
 import { transformFileSync } from "@babel/core";
+import reactTranspiler from '../utils/react-to-vue';
+import customVuePreset from '../utils/vue-preset'
 
 /*
 *
@@ -44,7 +46,7 @@ export const reactToVue = async path => {
       babelrc: false,
       presets: [
         [
-          "module:babel-preset-vue",
+          customVuePreset,
           {
             eventModifiers: false,
             vModel: false
@@ -54,7 +56,7 @@ export const reactToVue = async path => {
       plugins: [
         "@babel/plugin-proposal-class-properties",
         "@babel/plugin-proposal-object-rest-spread",
-        "module:react-to-vue"
+        reactTranspiler
       ]
     });
 

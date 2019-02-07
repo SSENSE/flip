@@ -18,7 +18,6 @@ pids
 
 # Compiled build folder
 dist
-build
 
 # Dependency directories
 node_modules/

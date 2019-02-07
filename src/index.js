@@ -11,9 +11,10 @@ const { version } = JSON.parse(fs.readFileSync("package.json", "utf8"));
 program
   .version(version)
   .command("<dir>", "Transpile components in this directory")
+  .option("-s", "--style", "Location of styles directory")
   .option("-b", "--bundle", "Bundle components")
-  .action(async (dir, { B }) => {
-    await generateComponents(dir);
+  .action(async (dir, { B, S }) => {
+    await generateComponents(dir, S);
 
     if (B) {
       await build().catch(e => console.log(e));

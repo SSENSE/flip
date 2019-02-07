@@ -4,12 +4,12 @@
   "description": "A React to Vue Component Transpiler",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Groupe-Atallah/flip"
+    "url": "https://github.com/SSENSE/flip"
   },
   "bugs": {
-    "url": "https://github.com/Groupe-Atallah/flip/issues"
+    "url": "https://github.com/SSENSE/flip/issues"
   },
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "babel src --presets @babel/env --out-dir build && chmod +x build/index.js",
     "test": "NODE_ENV=test mocha tests/**/*.test.js --recursive --require @babel/register --require @babel/polyfill"
@@ -46,8 +46,6 @@
     "@babel/preset-react": "^7.0.0-rc.2",
     "babel-helper-vue-jsx-merge-props": "file:src/utils/merge-props",
     "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-preset-vue": "file:src/utils/vue-preset",
-    "react-to-vue": "file:src/utils/react-to-vue",
     "rollup": "^0.64.1",
     "rollup-plugin-babel": "^4.0.0-beta.8",
     "rollup-plugin-node-resolve": "^3.3.0",
