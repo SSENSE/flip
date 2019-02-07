@@ -18,7 +18,7 @@ describe('scripts/index.js', () => {
     })
 
     it('generates index.js files inside each directory for export', async () => {
-        await generateComponents('tests/data/components', false);
+        await generateComponents('tests/data/components', "data/styles", false);
 
         expect(fs.readdirSync('dist/react')).to.include('index.js');
         expect(fs.readdirSync('dist/vue')).to.include('index.js');
