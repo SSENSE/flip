@@ -96,10 +96,10 @@ const Dot = styled.div`
   dotSpacing
 }) => `${index < dotCount - 1 ? dotSpacing : 0}px`};
 	animation: ${({
-  totalInterval,
+  dotCount,
   blinkInterval,
   index
-}) => `${totalInterval}s ${blinkInterval / 2 * index}s ${blink} step-end infinite`};
+}) => `${dotCount * blinkInterval}s ${blinkInterval / 2 * index}s ${blink} step-end infinite`};
 `;
 /**
  * Button Description
@@ -146,16 +146,5 @@ const Button = {
     }
 
   }
-};
-Button.propTypes = {
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']).isRequired,
-  loading: PropTypes.boolean
-};
-Button.componentStates = {
-  primary: {
-    loading: true
-  },
-  secondary: null,
-  tertiary: null
 };
 export default Button;

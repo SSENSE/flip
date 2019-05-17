@@ -45,6 +45,7 @@ export const reactToVue = async path => {
     const { code } = transformFileSync(newPath, {
       babelrc: false,
       presets: [
+        "@babel/preset-typescript",
         [
           customVuePreset,
           {
@@ -106,7 +107,10 @@ export const copyComponent = async path => {
  * */
 export const buildPath = async path => {
   let extension = "";
-  if (fs.existsSync(`${path}/index.jsx`)) {
+  if (fs.existsSync(`${path}/index.tsx`)) {
+    path += "/index.tsx";
+    extension = "tsx";
+  } else if (fs.existsSync(`${path}/index.jsx`)) {
     path += "/index.jsx";
     extension = "jsx";
   } else {
