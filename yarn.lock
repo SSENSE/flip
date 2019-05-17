@@ -748,13 +748,15 @@ atob@^2.1.1:
 "babel-helper-vue-jsx-merge-props@file:src/utils/merge-props":
   version "1.0.1"
 
-babel-plugin-jsx-event-modifiers@^2.0.2:
+babel-plugin-jsx-event-modifiers@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/babel-plugin-jsx-event-modifiers/-/babel-plugin-jsx-event-modifiers-2.0.5.tgz#93e6ebb5d7553bb08f9fedbf7a0bee3af09a0472"
+  integrity sha512-tWGnCk0whZ+nZcj9tYLw4+y08tPJXqaEjIxRJZS6DkUUae72Kz4BsoGpxt/Kow7mmgQJpvFCw8IPLSNh5rkZCg==
 
-babel-plugin-jsx-v-model@^2.0.1:
+babel-plugin-jsx-v-model@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-jsx-v-model/-/babel-plugin-jsx-v-model-2.0.3.tgz#c396416b99cb1af782087315ae1d3e62e070f47d"
+  integrity sha512-SIx3Y3XxwGEz56Q1atwr5GaZsxJ2IRYmn5dl38LFkaTAvjnbNQxsZHO+ylJPsd+Hmv+ixJBYYFEekPBTHwiGfQ==
   dependencies:
     babel-plugin-syntax-jsx "^6.18.0"
     html-tags "^2.0.0"
@@ -768,15 +770,6 @@ babel-plugin-syntax-jsx@^6.18.0:
   version "4.0.2"
   dependencies:
     esutils "^2.0.2"
-
-"babel-preset-vue@file:src/utils/vue-preset":
-  version "2.0.3"
-  dependencies:
-    babel-helper-vue-jsx-merge-props "file:../../../Library/Caches/Yarn/v1/merge-props"
-    babel-plugin-jsx-event-modifiers "^2.0.2"
-    babel-plugin-jsx-v-model "^2.0.1"
-    babel-plugin-syntax-jsx "^6.18.0"
-    babel-plugin-transform-vue-jsx "file:../../../Library/Caches/Yarn/v1/vue-jsx"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -1352,6 +1345,7 @@ homedir-polyfill@^1.0.1:
 html-tags@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-2.0.0.tgz#10b30a386085f43cede353cc8fa7cb0deeea668b"
+  integrity sha1-ELMKOGCF9Dzt41PMj6fLDe7qZos=
 
 iconv-lite@^0.4.4:
   version "0.4.24"
@@ -2073,9 +2067,6 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-"react-to-vue@file:src/utils/react-to-vue":
-  version "1.0.0"
-
 readable-stream@^2.0.2, readable-stream@^2.0.6:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
@@ -2417,6 +2408,7 @@ supports-color@^5.3.0, supports-color@^5.5.0:
 svg-tags@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
+  integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
 tar@^4:
   version "4.4.6"
