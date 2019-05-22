@@ -42,7 +42,7 @@ describe('scripts/transpile', () => {
                 generatedComponent = fs.readFileSync(`dist/vue/${component}/index.jsx`, 'utf8')
             }
 
-            const mockComponent = fs.readFileSync(`tests/data/transpiled-vue-mocks/${component}/index.jsx`, 'utf8')
+            const mockComponent = fs.readFileSync(`tests/data/transpiled-vue-mocks/${component}/index.js`, 'utf8')
 
             expect(generatedComponent).to.deep.equal(mockComponent);
         })
