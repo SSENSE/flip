@@ -101,10 +101,10 @@ const Dot = styled.div`
   index
 }) => `${dotCount * blinkInterval}s ${blinkInterval / 2 * index}s ${blink} step-end infinite`};
 `;
+
 /**
  * Button Description
  */
-
 const Button = {
   render() {
     const h = arguments[0];
