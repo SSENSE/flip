@@ -35,8 +35,14 @@ describe('scripts/transpile', () => {
 
         // check that each generated component matches our pre-transpiled mocks
         vueDir.forEach(component => {
-            const generatedComponent = fs.readFileSync(`dist/vue/${component}/index.jsx`, 'utf8')
-            const mockComponent = fs.readFileSync(`tests/data/transpiled-vue-mocks/${component}/index.jsx`, 'utf8')
+            let generatedComponent;
+            if (fs.existsSync(`dist/vue/${component}/index.tsx`)) {
+                generatedComponent = fs.readFileSync(`dist/vue/${component}/index.tsx`, 'utf8')
+            } else {
+                generatedComponent = fs.readFileSync(`dist/vue/${component}/index.jsx`, 'utf8')
+            }
+
+            const mockComponent = fs.readFileSync(`tests/data/transpiled-vue-mocks/${component}/index.js`, 'utf8')
 
             expect(generatedComponent).to.deep.equal(mockComponent);
         })

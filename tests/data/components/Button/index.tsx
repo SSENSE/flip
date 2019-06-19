@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styled, { ThemeProvider, keyframes } from 'styled-components';
 import atoms from '../../styles/atoms';
 
@@ -63,7 +62,19 @@ const blink = keyframes`
     }
 `;
 
-const Dot = styled.div`
+interface DotProps {
+	dotSize: {
+		small: number,
+		large: number
+	},
+	dotCount: number,
+	dotSpacing: number,
+	blinkInterval: number,
+	totalInterval: number,
+	index?: number
+}
+
+const Dot = styled.div<DotProps>`
 	@media (max-width: 500px) {
 		width: ${({ dotSize }) => `${dotSize.small}px`};
 		height: ${({ dotSize }) => `${dotSize.small}px`};
@@ -75,15 +86,28 @@ const Dot = styled.div`
 	border-radius: 50%;
 	margin-right: ${({ dotCount, index, dotSpacing }) =>
 		`${index < dotCount - 1 ? dotSpacing : 0}px`};
-	animation: ${({ totalInterval, blinkInterval, index }) =>
-		`${totalInterval}s ${(blinkInterval / 2) *
+	animation: ${({ dotCount, blinkInterval, index }) =>
+		`${dotCount * blinkInterval}s ${(blinkInterval / 2) *
 			index}s ${blink} step-end infinite`};
 `;
+
+export interface ButtonProps {
+	variant: 'primary' | 'secondary' | 'tertiary',
+	loading: boolean
+}
+
+export interface ButtonState {
+    primary: {
+        loading: true
+    },
+    secondary: null,
+    tertiary: null
+}
 
 /**
  * Button Description
  */
-class Button extends Component {
+class Button extends Component<ButtonProps, ButtonState> {
 	loadingAnimation = {
 		dotCount: 3,
 		dotSize: {
@@ -130,18 +154,5 @@ class Button extends Component {
 		);
 	}
 }
-
-Button.propTypes = {
-	variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']).isRequired,
-	loading: PropTypes.boolean
-};
-
-Button.componentStates = {
-    primary: {
-        loading: true
-    },
-    secondary: null,
-    tertiary: null
-};
 
 export default Button;

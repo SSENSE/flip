@@ -9,7 +9,10 @@
     },
 
     "test": {
-      "presets": ["@babel/preset-env"]
+      "presets": [
+        "@babel/preset-typescript",
+        "@babel/preset-env"
+      ]
     }
   }
 }
