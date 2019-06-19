@@ -91,19 +91,23 @@ const Dot = styled.div<DotProps>`
 			index}s ${blink} step-end infinite`};
 `;
 
-/**
- * Button Description
- */
-class Button extends Component<{
+export interface ButtonProps {
 	variant: 'primary' | 'secondary' | 'tertiary',
 	loading: boolean
-}, {
+}
+
+export interface ButtonState {
     primary: {
         loading: true
     },
     secondary: null,
     tertiary: null
-}> {
+}
+
+/**
+ * Button Description
+ */
+class Button extends Component<ButtonProps, ButtonState> {
 	loadingAnimation = {
 		dotCount: 3,
 		dotSize: {
